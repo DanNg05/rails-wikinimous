@@ -2,5 +2,5 @@
   <h1><%= link_to "Wikinimous", articles_path, class:"Wiki" %></h1>
   <%= link_to "New Article", new_article_path, class: "new-article" %>
 </div>
-<h2>Edit your article</h2>
+<h2 id="edit-article">Edit your article</h2>
 <%= render 'form', article: @article %>

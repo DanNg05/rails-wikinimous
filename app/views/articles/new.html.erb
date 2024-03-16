@@ -6,4 +6,6 @@
   <h2>New Article</h2>
   <%= render 'form', article: @article %>
 </div>
-<%= link_to "Back to the list", articles_path %>
+<div class="button">
+  <%= link_to "Back to the list", articles_path, class:"btn btn-secondary" %>
+</div>

@@ -1,11 +1,11 @@
-<%= form_with model: article, class:"row" do |f| %>
-  <div class="lg-col-4">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+<%= form_with model: article, class:"form" do |f| %>
+  <div class="form-title">
+    <%= f.label :title, class:"title-inside-form" %>
+    <%= f.text_field :title, class:"title-box" %>
   </div>
-  <div class="lg-col-4">
-    <%= f.label :content %>
-    <%= f.text_field :content %>
+  <div class="form-content">
+    <%= f.label :content, class:"content-inside-form" %>
+    <%= f.text_field :content, class:"content-box" %>
   </div>
-  <%= f.submit %>
+  <%= f.submit "Submit", class:"btn btn-primary mt-4" %>
 <% end %>

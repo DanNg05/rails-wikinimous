@@ -1,0 +1,9 @@
+<div class="header">
+  <h1><%= link_to "Wikinimous", articles_path, class:"Wiki" %></h1>
+  <%= link_to "New Article", new_article_path, class: "new-article" %>
+</div>
+<div class="row justify-content-center">
+  <h2>New Article</h2>
+  <%= render 'form', article: @article %>
+</div>
+<%= link_to "Back to the list", articles_path %>

@@ -1,1 +1,19 @@
-<h1></h1>
+<div class="header">
+  <h1><%= link_to "Wikinimous", articles_path, class:"Wiki" %></h1>
+  <%= link_to "New Article", new_article_path, class: "new-article" %>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="articles">
+      <h3 id="title">
+        <%= @article.title %>
+        <%= link_to "📝", edit_article_path(@article) %>
+        <%= link_to "🗑️",
+        article_path(@article),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </h3>
+      <p><%= @article.content %></p>
+    </div>
+  </div>
+</div>
